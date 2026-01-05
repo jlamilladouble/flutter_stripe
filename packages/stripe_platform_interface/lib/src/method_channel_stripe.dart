@@ -53,7 +53,6 @@ class MethodChannelStripe extends StripePlatform {
     String? merchantIdentifier,
     String? urlScheme,
     bool? setReturnUrlSchemeOnAndroid,
-    String? locale,
   }) async {
     await _methodChannel.invokeMethod('initialise', {
       'publishableKey': publishableKey,
@@ -63,7 +62,6 @@ class MethodChannelStripe extends StripePlatform {
       'threeDSecureParams': threeDSecureParams,
       'urlScheme': urlScheme,
       'setReturnUrlSchemeOnAndroid': setReturnUrlSchemeOnAndroid,
-      'locale': locale,
     });
 
     _methodChannel.setMethodCallHandler((call) async {
